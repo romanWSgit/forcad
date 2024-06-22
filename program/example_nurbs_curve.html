@@ -1,0 +1,1175 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+    <meta name="author" content="Seyed Ali Ghasemi" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>example_nurbs_curve &ndash; ForCAD</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ForCAD <small>0.4.1</small></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>example_nurbs_curve      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> BSD 3-Clause</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 3.2% of total for programs.">34 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/demo_curve.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/demo_curve.f90.html'>demo_curve.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">example_nurbs_curve</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/example_nurbs_curve.html#variable-wc~57">Wc</a>
+            <a class="list-group-item" href="../program/example_nurbs_curve.html#variable-xc~54">Xc</a>
+            <a class="list-group-item" href="../program/example_nurbs_curve.html#variable-nurbs~3">nurbs</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/example_nurbs_curve.html#proc-generate_xc~2">generate_Xc</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/example_nurbs_curve.html#src">example_nurbs_curve</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/forcad.html'>forcad</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~example_nurbs_curve~~UsesGraph Pages: 1 -->
+<svg id="programexample_nurbs_curveUsesGraph" width="499pt" height="137pt"
+ viewBox="0.00 0.00 499.00 136.87" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~example_nurbs_curve~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 132.87)">
+<title>program~~example_nurbs_curve~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-132.87 495,-132.87 495,4 -4,4"/>
+<!-- program~example_nurbs_curve -->
+<g id="program~~example_nurbs_curve~~UsesGraph_node1" class="node">
+<title>program~example_nurbs_curve</title>
+<polygon fill="none" stroke="black" points="491,-65.87 362,-65.87 362,-41.87 491,-41.87 491,-65.87"/>
+<text text-anchor="middle" x="426.5" y="-51.47" font-family="Helvetica,sans-Serif" font-size="10.50">example_nurbs_curve</text>
+</g>
+<!-- module~forcad -->
+<g id="program~~example_nurbs_curve~~UsesGraph_node2" class="node">
+<title>module~forcad</title>
+<g id="a_program~~example_nurbs_curve~~UsesGraph_node2"><a xlink:href="../module/forcad.html" xlink:title="forcad">
+<polygon fill="#337ab7" stroke="#337ab7" points="326,-65.87 272,-65.87 272,-41.87 326,-41.87 326,-65.87"/>
+<text text-anchor="middle" x="299" y="-51.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;module~forcad -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge1" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;module~forcad</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M361.65,-53.87C352.89,-53.87 344.16,-53.87 336.14,-53.87"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="336.07,-50.37 326.07,-53.87 336.07,-57.37 336.07,-50.37"/>
+</g>
+<!-- module~forcad_nurbs_curve -->
+<g id="program~~example_nurbs_curve~~UsesGraph_node3" class="node">
+<title>module~forcad_nurbs_curve</title>
+<g id="a_program~~example_nurbs_curve~~UsesGraph_node3"><a xlink:href="../module/forcad_nurbs_curve.html" xlink:title="forcad_nurbs_curve">
+<polygon fill="#337ab7" stroke="#337ab7" points="231,-128.87 114,-128.87 114,-104.87 231,-104.87 231,-128.87"/>
+<text text-anchor="middle" x="172.5" y="-114.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_nurbs_curve</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_nurbs_curve -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge2" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_nurbs_curve</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M282.42,-66.19C270.3,-75.31 252.78,-87.57 236,-95.87 232.25,-97.73 228.3,-99.49 224.27,-101.13"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="222.9,-97.91 214.82,-104.76 225.41,-104.44 222.9,-97.91"/>
+</g>
+<!-- module~forcad_nurbs_surface -->
+<g id="program~~example_nurbs_curve~~UsesGraph_node4" class="node">
+<title>module~forcad_nurbs_surface</title>
+<g id="a_program~~example_nurbs_curve~~UsesGraph_node4"><a xlink:href="../module/forcad_nurbs_surface.html" xlink:title="forcad_nurbs_surface">
+<polygon fill="#337ab7" stroke="#337ab7" points="236,-86.87 109,-86.87 109,-62.87 236,-62.87 236,-86.87"/>
+<text text-anchor="middle" x="172.5" y="-72.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_nurbs_surface</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_nurbs_surface -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge3" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_nurbs_surface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M271.9,-58.28C264.2,-59.57 255.38,-61.06 246.24,-62.6"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="245.52,-59.17 236.24,-64.29 246.69,-66.08 245.52,-59.17"/>
+</g>
+<!-- module~forcad_nurbs_volume -->
+<g id="program~~example_nurbs_curve~~UsesGraph_node5" class="node">
+<title>module~forcad_nurbs_volume</title>
+<g id="a_program~~example_nurbs_curve~~UsesGraph_node5"><a xlink:href="../module/forcad_nurbs_volume.html" xlink:title="forcad_nurbs_volume">
+<polygon fill="#337ab7" stroke="#337ab7" points="236,-44.87 109,-44.87 109,-20.87 236,-20.87 236,-44.87"/>
+<text text-anchor="middle" x="172.5" y="-30.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_nurbs_volume</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_nurbs_volume -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge4" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_nurbs_volume</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M271.9,-49.47C264.2,-48.17 255.38,-46.68 246.24,-45.14"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="246.69,-41.67 236.24,-43.46 245.52,-48.57 246.69,-41.67"/>
+</g>
+<!-- module~forcad_utils -->
+<g id="program~~example_nurbs_curve~~UsesGraph_node6" class="node">
+<title>module~forcad_utils</title>
+<g id="a_program~~example_nurbs_curve~~UsesGraph_node6"><a xlink:href="../module/forcad_utils.html" xlink:title="forcad_utils">
+<polygon fill="#337ab7" stroke="#337ab7" points="73,-65.87 0,-65.87 0,-41.87 73,-41.87 73,-65.87"/>
+<text text-anchor="middle" x="36.5" y="-51.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_utils</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_utils -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge5" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M284.97,-41.58C273.21,-31.39 254.89,-17.67 236,-11.87 182.04,4.68 163.47,2.94 109,-11.87 91.73,-16.57 74.37,-26.61 61.09,-35.69"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="58.7,-33.1 52.59,-41.75 62.76,-38.8 58.7,-33.1"/>
+</g>
+<!-- module~forcad_nurbs_curve&#45;&gt;module~forcad_utils -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge6" class="edge">
+<title>module~forcad_nurbs_curve&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M131.68,-104.87C124.04,-102.18 116.19,-99.15 109,-95.87 93.67,-88.89 77.42,-79.51 64.29,-71.39"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="66.08,-68.38 55.75,-66.02 62.35,-74.31 66.08,-68.38"/>
+</g>
+<!-- module~forcad_nurbs_surface&#45;&gt;module~forcad_utils -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge7" class="edge">
+<title>module~forcad_nurbs_surface&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M108.82,-65.05C100.19,-63.7 91.48,-62.33 83.24,-61.04"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="83.53,-57.54 73.1,-59.45 82.44,-64.46 83.53,-57.54"/>
+</g>
+<!-- module~forcad_nurbs_volume&#45;&gt;module~forcad_utils -->
+<g id="program~~example_nurbs_curve~~UsesGraph_edge8" class="edge">
+<title>module~forcad_nurbs_volume&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M108.82,-42.7C100.19,-44.05 91.48,-45.41 83.24,-46.7"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="82.44,-43.29 73.1,-48.29 83.53,-50.2 82.44,-43.29"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <p>This program demonstrates the usage of a NURBS curve object to create, and finalize a NURBS curve.
+It sets up control points and weights, generates the curve, and exports the control points
+and the curve to VTK files at various stages.</p>
+<p>Define control points for the NURBS curve</p>
+<p>Define weights for the control points</p>
+<p>Set control points and weights for the NURBS curve object</p>
+<p>Deallocate local arrays</p>
+<p>Export initial control points to a VTK file</p>
+<p>Generate the NURBS curve with a resolution of 500</p>
+<p>Export the generated curve to a VTK file</p>
+<p>Show the control geometry and geometry using PyVista</p>
+<p>Finalize the NURBS curve object</p>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~example_nurbs_curve~~CallsGraph Pages: 1 -->
+<svg id="programexample_nurbs_curveCallsGraph" width="641pt" height="210pt"
+ viewBox="0.00 0.00 641.00 209.74" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~example_nurbs_curve~~CallsGraph" class="graph" transform="scale(1.95 1.95) rotate(0) translate(4 406)">
+<title>program~~example_nurbs_curve~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-406 1249,-406 1249,4 -4,4"/>
+<!-- program~example_nurbs_curve -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node1" class="node">
+<title>program~example_nurbs_curve</title>
+<polygon fill="none" stroke="black" points="129,-150 0,-150 0,-126 129,-126 129,-150"/>
+<text text-anchor="middle" x="64.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50">example_nurbs_curve</text>
+</g>
+<!-- none~set~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node2" class="node">
+<title>none~set~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node2"><a xlink:href="../type/nurbs_curve.html#boundprocedure-set~2" xlink:title="nurbs_curve%set">
+<polygon fill="#a7506f" stroke="#a7506f" points="287,-339 184,-339 184,-315 287,-315 287,-339"/>
+<text text-anchor="middle" x="235.5" y="-324.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;none~set~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge1" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;none~set~2</title>
+<path fill="none" stroke="#ff0000" d="M76.33,-150.11C104.76,-181.9 181.74,-267.99 216.74,-307.14"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="214.27,-309.62 223.54,-314.75 219.49,-304.96 214.27,-309.62"/>
+</g>
+<!-- proc~create~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node3" class="node">
+<title>proc~create~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node3"><a xlink:href="../proc/create~2.html" xlink:title="nurbs_curve%create">
+<polygon fill="#d9534f" stroke="#d9534f" points="296,-234 175,-234 175,-210 296,-210 296,-234"/>
+<text text-anchor="middle" x="235.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%create</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;proc~create~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge2" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;proc~create~2</title>
+<path fill="none" stroke="#ff0000" d="M81.62,-150.15C100.67,-164.05 133.76,-186.71 165,-201 169.36,-202.99 173.95,-204.86 178.62,-206.58"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="177.64,-209.95 188.24,-209.94 179.95,-203.34 177.64,-209.95"/>
+</g>
+<!-- proc~export_xc~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node4" class="node">
+<title>proc~export_xc~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node4"><a xlink:href="../proc/export_xc~2.html" xlink:title="nurbs_curve%export_Xc">
+<polygon fill="#d9534f" stroke="#d9534f" points="305.5,-192 165.5,-192 165.5,-168 305.5,-168 305.5,-192"/>
+<text text-anchor="middle" x="235.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%export_Xc</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;proc~export_xc~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge3" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;proc~export_xc~2</title>
+<path fill="none" stroke="#ff0000" d="M113.93,-150.04C133.38,-154.87 155.96,-160.48 176.29,-165.53"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="175.52,-168.95 186.06,-167.96 177.2,-162.15 175.52,-168.95"/>
+</g>
+<!-- proc~export_xg~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node5" class="node">
+<title>proc~export_xg~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node5"><a xlink:href="../proc/export_xg~2.html" xlink:title="nurbs_curve%export_Xg">
+<polygon fill="#d9534f" stroke="#d9534f" points="306,-150 165,-150 165,-126 306,-126 306,-150"/>
+<text text-anchor="middle" x="235.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%export_Xg</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;proc~export_xg~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge4" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;proc~export_xg~2</title>
+<path fill="none" stroke="#ff0000" d="M129.39,-138C137.63,-138 146.15,-138 154.61,-138"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="154.87,-141.5 164.87,-138 154.87,-134.5 154.87,-141.5"/>
+</g>
+<!-- proc~finalize~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node6" class="node">
+<title>proc~finalize~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node6"><a xlink:href="../proc/finalize~2.html" xlink:title="nurbs_curve%finalize">
+<polygon fill="#d9534f" stroke="#d9534f" points="298.5,-108 172.5,-108 172.5,-84 298.5,-84 298.5,-108"/>
+<text text-anchor="middle" x="235.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%finalize</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;proc~finalize~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge5" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;proc~finalize~2</title>
+<path fill="none" stroke="#ff0000" d="M113.93,-125.96C133.38,-121.13 155.96,-115.52 176.29,-110.47"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="177.2,-113.85 186.06,-108.04 175.52,-107.05 177.2,-113.85"/>
+</g>
+<!-- proc~generate_xc~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node7" class="node">
+<title>proc~generate_xc~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node7"><a xlink:href="../proc/generate_xc~2.html" xlink:title="generate_Xc">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="275.5,-66 195.5,-66 195.5,-42 275.5,-42 275.5,-66"/>
+<text text-anchor="middle" x="235.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">generate_Xc</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;proc~generate_xc~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge6" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;proc~generate_xc~2</title>
+<path fill="none" stroke="#ff0000" d="M81.62,-125.85C100.67,-111.95 133.76,-89.29 165,-75 171.54,-72.01 178.62,-69.31 185.67,-66.92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="186.77,-70.24 195.21,-63.85 184.62,-63.58 186.77,-70.24"/>
+</g>
+<!-- proc~show~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node8" class="node">
+<title>proc~show~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node8"><a xlink:href="../proc/show~2.html" xlink:title="nurbs_curve%show">
+<polygon fill="#d9534f" stroke="#d9534f" points="293,-24 178,-24 178,0 293,0 293,-24"/>
+<text text-anchor="middle" x="235.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%show</text>
+</a>
+</g>
+</g>
+<!-- program~example_nurbs_curve&#45;&gt;proc~show~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge7" class="edge">
+<title>program~example_nurbs_curve&#45;&gt;proc~show~2</title>
+<path fill="none" stroke="#ff0000" d="M73.83,-125.66C89.25,-103.76 124.39,-58.06 165,-33 167.93,-31.19 171.03,-29.53 174.22,-28"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="175.62,-31.21 183.43,-24.05 172.86,-24.78 175.62,-31.21"/>
+</g>
+<!-- proc~set1~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node13" class="node">
+<title>proc~set1~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node13"><a xlink:href="../proc/set1~2.html" xlink:title="nurbs_curve%set1">
+<polygon fill="#d9534f" stroke="#d9534f" points="488,-402 378,-402 378,-378 488,-378 488,-402"/>
+<text text-anchor="middle" x="433" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set1</text>
+</a>
+</g>
+</g>
+<!-- none~set~2&#45;&gt;proc~set1~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge8" class="edge">
+<title>none~set~2&#45;&gt;proc~set1~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M263.42,-339.01C284.5,-348.1 314.73,-360.44 342,-369 350.34,-371.62 359.21,-374.07 368,-376.31"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="367.32,-379.75 377.87,-378.75 369,-372.96 367.32,-379.75"/>
+</g>
+<!-- proc~set2~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node14" class="node">
+<title>proc~set2~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node14"><a xlink:href="../proc/set2~2.html" xlink:title="nurbs_curve%set2">
+<polygon fill="#d9534f" stroke="#d9534f" points="488,-318 378,-318 378,-294 488,-294 488,-318"/>
+<text text-anchor="middle" x="433" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set2</text>
+</a>
+</g>
+</g>
+<!-- none~set~2&#45;&gt;proc~set2~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge9" class="edge">
+<title>none~set~2&#45;&gt;proc~set2~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M287.1,-321.56C311.67,-318.93 341.47,-315.72 367.63,-312.91"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="368.27,-316.37 377.84,-311.82 367.53,-309.41 368.27,-316.37"/>
+</g>
+<!-- proc~set3~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node15" class="node">
+<title>proc~set3~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node15"><a xlink:href="../proc/set3~2.html" xlink:title="nurbs_curve%set3">
+<polygon fill="#d9534f" stroke="#d9534f" points="488,-360 378,-360 378,-336 488,-336 488,-360"/>
+<text text-anchor="middle" x="433" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set3</text>
+</a>
+</g>
+</g>
+<!-- none~set~2&#45;&gt;proc~set3~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge10" class="edge">
+<title>none~set~2&#45;&gt;proc~set3~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M287.1,-332.44C311.67,-335.07 341.47,-338.28 367.63,-341.09"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="367.53,-344.59 377.84,-342.18 368.27,-337.63 367.53,-344.59"/>
+</g>
+<!-- interface~compute_xg~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node9" class="node">
+<title>interface~compute_xg~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node9"><a xlink:href="../interface/compute_xg~2.html" xlink:title="compute_Xg">
+<polygon fill="#a7506f" stroke="#a7506f" points="472.5,-276 393.5,-276 393.5,-252 472.5,-252 472.5,-276"/>
+<text text-anchor="middle" x="433" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_Xg</text>
+</a>
+</g>
+</g>
+<!-- proc~create~2&#45;&gt;interface~compute_xg~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge11" class="edge">
+<title>proc~create~2&#45;&gt;interface~compute_xg~2</title>
+<path fill="none" stroke="#ffda00" d="M292.52,-234.04C321.26,-240.21 355.93,-247.66 383.51,-253.58"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="382.81,-257.01 393.33,-255.69 384.28,-250.17 382.81,-257.01"/>
+</g>
+<!-- proc~is_rational~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node12" class="node">
+<title>proc~is_rational~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node12"><a xlink:href="../proc/is_rational~2.html" xlink:title="nurbs_curve%is_rational">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="504,-234 362,-234 362,-210 504,-210 504,-234"/>
+<text text-anchor="middle" x="433" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%is_rational</text>
+</a>
+</g>
+</g>
+<!-- proc~create~2&#45;&gt;proc~is_rational~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge12" class="edge">
+<title>proc~create~2&#45;&gt;proc~is_rational~2</title>
+<path fill="none" stroke="#ffda00" d="M296.22,-222C313.65,-222 333,-222 351.49,-222"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="351.66,-225.5 361.66,-222 351.66,-218.5 351.66,-225.5"/>
+</g>
+<!-- proc~cmp_elem_xc_vis~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node10" class="node">
+<title>proc~cmp_elem_xc_vis~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node10"><a xlink:href="../proc/cmp_elem_xc_vis~2.html" xlink:title="nurbs_curve%cmp_elem_Xc_vis">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="523.5,-192 342.5,-192 342.5,-168 523.5,-168 523.5,-192"/>
+<text text-anchor="middle" x="433" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%cmp_elem_Xc_vis</text>
+</a>
+</g>
+</g>
+<!-- proc~export_xc~2&#45;&gt;proc~cmp_elem_xc_vis~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge13" class="edge">
+<title>proc~export_xc~2&#45;&gt;proc~cmp_elem_xc_vis~2</title>
+<path fill="none" stroke="#48ff00" d="M305.7,-180C314.32,-180 323.26,-180 332.23,-180"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="332.35,-183.5 342.35,-180 332.35,-176.5 332.35,-183.5"/>
+</g>
+<!-- proc~cmp_elem_xg_vis~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node11" class="node">
+<title>proc~cmp_elem_xg_vis~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node11"><a xlink:href="../proc/cmp_elem_xg_vis~2.html" xlink:title="nurbs_curve%cmp_elem_Xg_vis">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="524,-150 342,-150 342,-126 524,-126 524,-150"/>
+<text text-anchor="middle" x="433" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%cmp_elem_Xg_vis</text>
+</a>
+</g>
+</g>
+<!-- proc~export_xg~2&#45;&gt;proc~cmp_elem_xg_vis~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge14" class="edge">
+<title>proc~export_xg~2&#45;&gt;proc~cmp_elem_xg_vis~2</title>
+<path fill="none" stroke="#00ff91" d="M306.25,-138C314.53,-138 323.1,-138 331.69,-138"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="331.78,-141.5 341.78,-138 331.78,-134.5 331.78,-141.5"/>
+</g>
+<!-- interface~elemconn_c0 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node16" class="node">
+<title>interface~elemconn_c0</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node16"><a xlink:href="../interface/elemconn_c0.html" xlink:title="elemConn_C0">
+<polygon fill="#a7506f" stroke="#a7506f" points="680.5,-171 593.5,-171 593.5,-147 680.5,-147 680.5,-171"/>
+<text text-anchor="middle" x="637" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">elemConn_C0</text>
+</a>
+</g>
+</g>
+<!-- proc~cmp_elem_xc_vis~2&#45;&gt;interface~elemconn_c0 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge15" class="edge">
+<title>proc~cmp_elem_xc_vis~2&#45;&gt;interface~elemconn_c0</title>
+<path fill="none" stroke="#ffda00" d="M523.78,-170.67C544.13,-168.55 565.1,-166.37 583.32,-164.48"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="583.84,-167.94 593.43,-163.43 583.12,-160.98 583.84,-167.94"/>
+</g>
+<!-- proc~cmp_elem_xg_vis~2&#45;&gt;interface~elemconn_c0 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge16" class="edge">
+<title>proc~cmp_elem_xg_vis~2&#45;&gt;interface~elemconn_c0</title>
+<path fill="none" stroke="#48ff00" d="M524.07,-147.36C544.3,-149.47 565.13,-151.63 583.25,-153.52"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="582.99,-157.01 593.3,-154.56 583.71,-150.05 582.99,-157.01"/>
+</g>
+<!-- proc~cmp_degree~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node17" class="node">
+<title>proc~cmp_degree~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node17"><a xlink:href="../proc/cmp_degree~2.html" xlink:title="nurbs_curve%cmp_degree">
+<polygon fill="#d9534f" stroke="#d9534f" points="714,-381 560,-381 560,-357 714,-357 714,-381"/>
+<text text-anchor="middle" x="637" y="-366.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%cmp_degree</text>
+</a>
+</g>
+</g>
+<!-- proc~set1~2&#45;&gt;proc~cmp_degree~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge17" class="edge">
+<title>proc~set1~2&#45;&gt;proc~cmp_degree~2</title>
+<path fill="none" stroke="#0091ff" d="M488.13,-384.37C507.01,-382.41 528.7,-380.15 549.55,-377.99"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="550.11,-381.45 559.7,-376.93 549.39,-374.49 550.11,-381.45"/>
+</g>
+<!-- proc~compute_knot_vector -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node18" class="node">
+<title>proc~compute_knot_vector</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node18"><a xlink:href="../proc/compute_knot_vector.html" xlink:title="compute_knot_vector">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="700.5,-318 573.5,-318 573.5,-294 700.5,-294 700.5,-318"/>
+<text text-anchor="middle" x="637" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_knot_vector</text>
+</a>
+</g>
+</g>
+<!-- proc~set2~2&#45;&gt;proc~compute_knot_vector -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge18" class="edge">
+<title>proc~set2~2&#45;&gt;proc~compute_knot_vector</title>
+<path fill="none" stroke="#4800ff" d="M488.13,-306C511.24,-306 538.56,-306 563.39,-306"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="563.49,-309.5 573.49,-306 563.49,-302.5 563.49,-309.5"/>
+</g>
+<!-- proc~set3~2&#45;&gt;proc~cmp_degree~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge19" class="edge">
+<title>proc~set3~2&#45;&gt;proc~cmp_degree~2</title>
+<path fill="none" stroke="#ff00da" d="M488.13,-353.63C507.01,-355.59 528.7,-357.85 549.55,-360.01"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="549.39,-363.51 559.7,-361.07 550.11,-356.55 549.39,-363.51"/>
+</g>
+<!-- proc~cmp_elemconn_c0_l -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node19" class="node">
+<title>proc~cmp_elemconn_c0_l</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node19"><a xlink:href="../proc/cmp_elemconn_c0_l.html" xlink:title="cmp_elemConn_C0_L">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="898,-213 771,-213 771,-189 898,-189 898,-213"/>
+<text text-anchor="middle" x="834.5" y="-198.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cmp_elemConn_C0_L</text>
+</a>
+</g>
+</g>
+<!-- interface~elemconn_c0&#45;&gt;proc~cmp_elemconn_c0_l -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge20" class="edge">
+<title>interface~elemconn_c0&#45;&gt;proc~cmp_elemconn_c0_l</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M680.9,-168.22C706.24,-173.66 738.85,-180.67 767.41,-186.8"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="766.81,-190.25 777.33,-188.93 768.28,-183.41 766.81,-190.25"/>
+</g>
+<!-- proc~cmp_elemconn_c0_s -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node20" class="node">
+<title>proc~cmp_elemconn_c0_s</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node20"><a xlink:href="../proc/cmp_elemconn_c0_s.html" xlink:title="cmp_elemConn_C0_S">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="898,-171 771,-171 771,-147 898,-147 898,-171"/>
+<text text-anchor="middle" x="834.5" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cmp_elemConn_C0_S</text>
+</a>
+</g>
+</g>
+<!-- interface~elemconn_c0&#45;&gt;proc~cmp_elemconn_c0_s -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge21" class="edge">
+<title>interface~elemconn_c0&#45;&gt;proc~cmp_elemconn_c0_s</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M680.9,-159C704.23,-159 733.71,-159 760.52,-159"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="760.65,-162.5 770.65,-159 760.65,-155.5 760.65,-162.5"/>
+</g>
+<!-- proc~cmp_elemconn_c0_v -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node21" class="node">
+<title>proc~cmp_elemconn_c0_v</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node21"><a xlink:href="../proc/cmp_elemconn_c0_v.html" xlink:title="cmp_elemConn_C0_V">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="898.5,-129 770.5,-129 770.5,-105 898.5,-105 898.5,-129"/>
+<text text-anchor="middle" x="834.5" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">cmp_elemConn_C0_V</text>
+</a>
+</g>
+</g>
+<!-- interface~elemconn_c0&#45;&gt;proc~cmp_elemconn_c0_v -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge22" class="edge">
+<title>interface~elemconn_c0&#45;&gt;proc~cmp_elemconn_c0_v</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M680.9,-149.78C706.24,-144.34 738.85,-137.33 767.41,-131.2"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="768.28,-134.59 777.33,-129.07 766.81,-127.75 768.28,-134.59"/>
+</g>
+<!-- proc~get_multiplicity~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node22" class="node">
+<title>proc~get_multiplicity~2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node22"><a xlink:href="../proc/get_multiplicity~2.html" xlink:title="nurbs_curve%get_multiplicity">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="919,-381 750,-381 750,-357 919,-357 919,-381"/>
+<text text-anchor="middle" x="834.5" y="-366.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%get_multiplicity</text>
+</a>
+</g>
+</g>
+<!-- proc~cmp_degree~2&#45;&gt;proc~get_multiplicity~2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge23" class="edge">
+<title>proc~cmp_degree~2&#45;&gt;proc~get_multiplicity~2</title>
+<path fill="none" stroke="#00ff00" d="M714.15,-369C722.54,-369 731.17,-369 739.75,-369"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="739.79,-372.5 749.79,-369 739.79,-365.5 739.79,-372.5"/>
+</g>
+<!-- proc~repelem -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node23" class="node">
+<title>proc~repelem</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node23"><a xlink:href="../proc/repelem.html" xlink:title="repelem">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="863,-318 806,-318 806,-294 863,-294 863,-318"/>
+<text text-anchor="middle" x="834.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">repelem</text>
+</a>
+</g>
+</g>
+<!-- proc~compute_knot_vector&#45;&gt;proc~repelem -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge24" class="edge">
+<title>proc~compute_knot_vector&#45;&gt;proc~repelem</title>
+<path fill="none" stroke="#0000ff" d="M700.66,-306C731.92,-306 768.69,-306 795.61,-306"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="795.78,-309.5 805.78,-306 795.78,-302.5 795.78,-309.5"/>
+</g>
+<!-- interface~compute_multiplicity -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node24" class="node">
+<title>interface~compute_multiplicity</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node24"><a xlink:href="../interface/compute_multiplicity.html" xlink:title="compute_multiplicity">
+<polygon fill="#a7506f" stroke="#a7506f" points="1079,-381 955,-381 955,-357 1079,-357 1079,-381"/>
+<text text-anchor="middle" x="1017" y="-366.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_multiplicity</text>
+</a>
+</g>
+</g>
+<!-- proc~get_multiplicity~2&#45;&gt;interface~compute_multiplicity -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge25" class="edge">
+<title>proc~get_multiplicity~2&#45;&gt;interface~compute_multiplicity</title>
+<path fill="none" stroke="#0066ff" d="M919.15,-369C927.73,-369 936.4,-369 944.84,-369"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="944.99,-372.5 954.99,-369 944.99,-365.5 944.99,-372.5"/>
+</g>
+<!-- proc~compute_multiplicity1 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node25" class="node">
+<title>proc~compute_multiplicity1</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node25"><a xlink:href="../proc/compute_multiplicity1.html" xlink:title="compute_multiplicity1">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="1245,-402 1115,-402 1115,-378 1245,-378 1245,-402"/>
+<text text-anchor="middle" x="1180" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_multiplicity1</text>
+</a>
+</g>
+</g>
+<!-- interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity1 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge26" class="edge">
+<title>interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity1</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1079.33,-377C1087.69,-378.09 1096.35,-379.22 1104.92,-380.34"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1104.53,-383.82 1114.9,-381.64 1105.44,-376.88 1104.53,-383.82"/>
+</g>
+<!-- proc~compute_multiplicity2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_node26" class="node">
+<title>proc~compute_multiplicity2</title>
+<g id="a_program~~example_nurbs_curve~~CallsGraph_node26"><a xlink:href="../proc/compute_multiplicity2.html" xlink:title="compute_multiplicity2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="1245,-360 1115,-360 1115,-336 1245,-336 1245,-360"/>
+<text text-anchor="middle" x="1180" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_multiplicity2</text>
+</a>
+</g>
+</g>
+<!-- interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity2 -->
+<g id="program~~example_nurbs_curve~~CallsGraph_edge27" class="edge">
+<title>interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1079.33,-361C1087.69,-359.91 1096.35,-358.78 1104.92,-357.66"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1105.44,-361.12 1114.9,-356.36 1104.53,-354.18 1105.44,-361.12"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprogramexample_nurbs_curveCallsGraph = svgPanZoom('#programexample_nurbs_curveCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.16 1.16) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-wc~57"></span>
+              real(kind=rk),
+            </td>
+            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>Wc</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Arrays for control points and weights</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xc~54"></span>
+              real(kind=rk),
+            </td>
+            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>Xc</strong>(:,:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Arrays for control points and weights</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nurbs~3"></span>
+              type(<a href='../type/nurbs_curve.html'>nurbs_curve</a>)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nurbs</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Declare a NURBS curve object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+ 
+    <section>
+    <h2>Functions</h2>
+      <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-generate_xc~2"></span> <h3> function <a href='../proc/generate_xc~2.html'>generate_Xc</a>(num_coils, radius, height, num_points_per_coil) result(control_points)  
+</h3></div>
+    <div class="card-body">
+          
+  
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-num_coils"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>num_coils</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-radius~4"></span>
+              real(kind=rk),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>radius</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-height~4"></span>
+              real(kind=rk),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>height</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-num_points_per_coil"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>num_points_per_coil</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>real(kind=rk), allocatable, (:,:)</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+    </section>
+    <br>
+
+
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">example_nurbs_curve</span>
+
+<span class="w">    </span><span class="k">use </span><span class="n">forcad</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">rk</span><span class="p">,</span><span class="w"> </span><span class="n">nurbs_curve</span>
+
+<span class="w">    </span><span class="k">implicit none</span>
+<span class="k">    type</span><span class="p">(</span><span class="n">nurbs_curve</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">nurbs</span><span class="w">                </span><span class="c">!! Declare a NURBS curve object</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">Xc</span><span class="p">(:,:),</span><span class="w"> </span><span class="n">Wc</span><span class="p">(:)</span><span class="w">   </span><span class="c">!! Arrays for control points and weights</span>
+
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="c">! Setting up the NURBS curve</span>
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+
+<span class="w">    </span><span class="c">!&gt; Define control points for the NURBS curve</span>
+<span class="w">    </span><span class="n">Xc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generate_Xc</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0_rk</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0_rk</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!&gt; Define weights for the control points</span>
+<span class="w">    </span><span class="k">allocate</span><span class="p">(</span><span class="n">Wc</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">Xc</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)),</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0_rk</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!&gt; Set control points and weights for the NURBS curve object</span>
+<span class="w">    </span><span class="k">call </span><span class="n">nurbs</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="n">Xc</span><span class="p">,</span><span class="w"> </span><span class="n">Wc</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!&gt; Deallocate local arrays</span>
+<span class="w">    </span><span class="k">deallocate</span><span class="p">(</span><span class="n">Xc</span><span class="p">,</span><span class="w"> </span><span class="n">Wc</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!&gt; Export initial control points to a VTK file</span>
+<span class="w">    </span><span class="k">call </span><span class="n">nurbs</span><span class="p">%</span><span class="n">export_Xc</span><span class="p">(</span><span class="s1">&#39;vtk/demo_curve_Xc.vtk&#39;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="c">! Creating the NURBS curve</span>
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+
+<span class="w">    </span><span class="c">!&gt; Generate the NURBS curve with a resolution of 500</span>
+<span class="w">    </span><span class="k">call </span><span class="n">nurbs</span><span class="p">%</span><span class="n">create</span><span class="p">(</span><span class="n">res</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!&gt; Export the generated curve to a VTK file</span>
+<span class="w">    </span><span class="k">call </span><span class="n">nurbs</span><span class="p">%</span><span class="n">export_Xg</span><span class="p">(</span><span class="s1">&#39;vtk/demo_curve_Xg.vtk&#39;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="c">! Visualization using PyVista</span>
+<span class="w">    </span><span class="c">! Note: PyVista is required for visualization. Install it using `pip install pyvista`</span>
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+
+<span class="w">    </span><span class="c">!&gt; Show the control geometry and geometry using PyVista</span>
+<span class="w">    </span><span class="k">call </span><span class="n">nurbs</span><span class="p">%</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;vtk/demo_curve_Xc.vtk&#39;</span><span class="p">,</span><span class="s1">&#39;vtk/demo_curve_Xg.vtk&#39;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="c">! Finalizing</span>
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+
+<span class="w">    </span><span class="c">!&gt; Finalize the NURBS curve object</span>
+<span class="w">    </span><span class="k">call </span><span class="n">nurbs</span><span class="p">%</span><span class="n">finalize</span><span class="p">()</span>
+
+<span class="k">contains</span>
+
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+<span class="w">    </span><span class="k">function </span><span class="n">generate_Xc</span><span class="p">(</span><span class="n">num_coils</span><span class="p">,</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="n">num_points_per_coil</span><span class="p">)</span><span class="w"> </span><span class="k">result</span><span class="p">(</span><span class="n">control_points</span><span class="p">)</span>
+<span class="w">        </span><span class="kt">integer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">num_coils</span><span class="p">,</span><span class="w"> </span><span class="n">num_points_per_coil</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="n">height</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">control_points</span><span class="p">(:,:)</span>
+<span class="w">        </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">coil</span><span class="p">,</span><span class="w"> </span><span class="n">i</span>
+<span class="w">        </span><span class="kt">real</span><span class="p">(</span><span class="n">rk</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">theta</span><span class="p">,</span><span class="w"> </span><span class="n">coil_height</span>
+<span class="w">        </span><span class="k">allocate</span><span class="p">(</span><span class="n">control_points</span><span class="p">(</span><span class="n">num_coils</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_points_per_coil</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">))</span>
+<span class="w">        </span><span class="k">do </span><span class="n">coil</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">num_coils</span>
+<span class="w">            </span><span class="n">coil_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="n">coil</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">rk</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="n">num_coils</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">rk</span><span class="p">)</span>
+<span class="w">            </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0_rk</span>
+<span class="w">            </span><span class="k">do </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">num_points_per_coil</span>
+<span class="w">                </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theta</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.0_rk</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">acos</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0_rk</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kt">real</span><span class="p">(</span><span class="n">num_points_per_coil</span><span class="p">,</span><span class="w"> </span><span class="n">rk</span><span class="p">)</span>
+<span class="w">                </span><span class="n">control_points</span><span class="p">((</span><span class="n">coil</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_points_per_coil</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="w">                </span><span class="n">control_points</span><span class="p">((</span><span class="n">coil</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_points_per_coil</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">radius</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="w">                </span><span class="n">control_points</span><span class="p">((</span><span class="n">coil</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num_points_per_coil</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coil_height</span>
+<span class="w">            </span><span class="k">end do</span>
+<span class="k">        end do</span>
+<span class="k">    end function</span>
+<span class="w">    </span><span class="c">!-----------------------------------------------------------------------------</span>
+
+<span class="k">end program </span><span class="n">example_nurbs_curve</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ForCAD
+ was developed by Seyed Ali Ghasemi<br>              &copy; 2024 BSD 3-Clause
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-06-22T19:32:33.440940             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

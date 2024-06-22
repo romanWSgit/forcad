@@ -1,0 +1,1061 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+    <meta name="author" content="Seyed Ali Ghasemi" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>nearest_point_1d &ndash; ForCAD</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">ForCAD <small>0.4.1</small></a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>nearest_point_1d      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> BSD 3-Clause</li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 2.3% of total for programs.">25 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/nearest_point_1d.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/nearest_point_1d.f90.html'>nearest_point_1d.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">nearest_point_1d</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/nearest_point_1d.html#variable-wc">Wc</a>
+            <a class="list-group-item" href="../program/nearest_point_1d.html#variable-xc">Xc</a>
+            <a class="list-group-item" href="../program/nearest_point_1d.html#variable-id">id</a>
+            <a class="list-group-item" href="../program/nearest_point_1d.html#variable-knot">knot</a>
+            <a class="list-group-item" href="../program/nearest_point_1d.html#variable-nearest_xg">nearest_Xg</a>
+            <a class="list-group-item" href="../program/nearest_point_1d.html#variable-nearest_xt">nearest_Xt</a>
+            <a class="list-group-item" href="../program/nearest_point_1d.html#variable-shape~3">shape</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/forcad.html'>forcad</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~nearest_point_1d~~UsesGraph Pages: 1 -->
+<svg id="programnearest_point_1dUsesGraph" width="473pt" height="137pt"
+ viewBox="0.00 0.00 473.00 136.87" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~nearest_point_1d~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 132.87)">
+<title>program~~nearest_point_1d~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-132.87 469,-132.87 469,4 -4,4"/>
+<!-- program~nearest_point_1d -->
+<g id="program~~nearest_point_1d~~UsesGraph_node1" class="node">
+<title>program~nearest_point_1d</title>
+<polygon fill="none" stroke="black" points="465,-65.87 362,-65.87 362,-41.87 465,-41.87 465,-65.87"/>
+<text text-anchor="middle" x="413.5" y="-51.47" font-family="Helvetica,sans-Serif" font-size="10.50">nearest_point_1d</text>
+</g>
+<!-- module~forcad -->
+<g id="program~~nearest_point_1d~~UsesGraph_node2" class="node">
+<title>module~forcad</title>
+<g id="a_program~~nearest_point_1d~~UsesGraph_node2"><a xlink:href="../module/forcad.html" xlink:title="forcad">
+<polygon fill="#337ab7" stroke="#337ab7" points="326,-65.87 272,-65.87 272,-41.87 326,-41.87 326,-65.87"/>
+<text text-anchor="middle" x="299" y="-51.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad</text>
+</a>
+</g>
+</g>
+<!-- program~nearest_point_1d&#45;&gt;module~forcad -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge1" class="edge">
+<title>program~nearest_point_1d&#45;&gt;module~forcad</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M361.84,-53.87C353.25,-53.87 344.47,-53.87 336.34,-53.87"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="336.08,-50.37 326.08,-53.87 336.08,-57.37 336.08,-50.37"/>
+</g>
+<!-- module~forcad_nurbs_curve -->
+<g id="program~~nearest_point_1d~~UsesGraph_node3" class="node">
+<title>module~forcad_nurbs_curve</title>
+<g id="a_program~~nearest_point_1d~~UsesGraph_node3"><a xlink:href="../module/forcad_nurbs_curve.html" xlink:title="forcad_nurbs_curve">
+<polygon fill="#337ab7" stroke="#337ab7" points="231,-128.87 114,-128.87 114,-104.87 231,-104.87 231,-128.87"/>
+<text text-anchor="middle" x="172.5" y="-114.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_nurbs_curve</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_nurbs_curve -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge2" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_nurbs_curve</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M282.42,-66.19C270.3,-75.31 252.78,-87.57 236,-95.87 232.25,-97.73 228.3,-99.49 224.27,-101.13"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="222.9,-97.91 214.82,-104.76 225.41,-104.44 222.9,-97.91"/>
+</g>
+<!-- module~forcad_nurbs_surface -->
+<g id="program~~nearest_point_1d~~UsesGraph_node4" class="node">
+<title>module~forcad_nurbs_surface</title>
+<g id="a_program~~nearest_point_1d~~UsesGraph_node4"><a xlink:href="../module/forcad_nurbs_surface.html" xlink:title="forcad_nurbs_surface">
+<polygon fill="#337ab7" stroke="#337ab7" points="236,-86.87 109,-86.87 109,-62.87 236,-62.87 236,-86.87"/>
+<text text-anchor="middle" x="172.5" y="-72.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_nurbs_surface</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_nurbs_surface -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge3" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_nurbs_surface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M271.9,-58.28C264.2,-59.57 255.38,-61.06 246.24,-62.6"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="245.52,-59.17 236.24,-64.29 246.69,-66.08 245.52,-59.17"/>
+</g>
+<!-- module~forcad_nurbs_volume -->
+<g id="program~~nearest_point_1d~~UsesGraph_node5" class="node">
+<title>module~forcad_nurbs_volume</title>
+<g id="a_program~~nearest_point_1d~~UsesGraph_node5"><a xlink:href="../module/forcad_nurbs_volume.html" xlink:title="forcad_nurbs_volume">
+<polygon fill="#337ab7" stroke="#337ab7" points="236,-44.87 109,-44.87 109,-20.87 236,-20.87 236,-44.87"/>
+<text text-anchor="middle" x="172.5" y="-30.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_nurbs_volume</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_nurbs_volume -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge4" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_nurbs_volume</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M271.9,-49.47C264.2,-48.17 255.38,-46.68 246.24,-45.14"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="246.69,-41.67 236.24,-43.46 245.52,-48.57 246.69,-41.67"/>
+</g>
+<!-- module~forcad_utils -->
+<g id="program~~nearest_point_1d~~UsesGraph_node6" class="node">
+<title>module~forcad_utils</title>
+<g id="a_program~~nearest_point_1d~~UsesGraph_node6"><a xlink:href="../module/forcad_utils.html" xlink:title="forcad_utils">
+<polygon fill="#337ab7" stroke="#337ab7" points="73,-65.87 0,-65.87 0,-41.87 73,-41.87 73,-65.87"/>
+<text text-anchor="middle" x="36.5" y="-51.47" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">forcad_utils</text>
+</a>
+</g>
+</g>
+<!-- module~forcad&#45;&gt;module~forcad_utils -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge5" class="edge">
+<title>module~forcad&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M284.97,-41.58C273.21,-31.39 254.89,-17.67 236,-11.87 182.04,4.68 163.47,2.94 109,-11.87 91.73,-16.57 74.37,-26.61 61.09,-35.69"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="58.7,-33.1 52.59,-41.75 62.76,-38.8 58.7,-33.1"/>
+</g>
+<!-- module~forcad_nurbs_curve&#45;&gt;module~forcad_utils -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge6" class="edge">
+<title>module~forcad_nurbs_curve&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M131.68,-104.87C124.04,-102.18 116.19,-99.15 109,-95.87 93.67,-88.89 77.42,-79.51 64.29,-71.39"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="66.08,-68.38 55.75,-66.02 62.35,-74.31 66.08,-68.38"/>
+</g>
+<!-- module~forcad_nurbs_surface&#45;&gt;module~forcad_utils -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge7" class="edge">
+<title>module~forcad_nurbs_surface&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M108.82,-65.05C100.19,-63.7 91.48,-62.33 83.24,-61.04"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="83.53,-57.54 73.1,-59.45 82.44,-64.46 83.53,-57.54"/>
+</g>
+<!-- module~forcad_nurbs_volume&#45;&gt;module~forcad_utils -->
+<g id="program~~nearest_point_1d~~UsesGraph_edge8" class="edge">
+<title>module~forcad_nurbs_volume&#45;&gt;module~forcad_utils</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M108.82,-42.7C100.19,-44.05 91.48,-45.41 83.24,-46.7"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="82.44,-43.29 73.1,-48.29 83.53,-50.2 82.44,-43.29"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Define control points for the NURBS curve
+Define weights for the control points (optional)
+Define knot vector</p>
+<p>Set knot vector, control points, and weights for the NURBS curve object.
+Wc is optional</p>
+<p>Generate the NURBS curve with a resolution of 20</p>
+<p>Find the nearest point on the curve to a given point
+Find the nearest point on the curve to a given point
+The optimization method is used to find the nearest point
+The optimization method is based on the Newton-Raphson method
+Finalize the NURBS curve object</p>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: program~~nearest_point_1d~~CallsGraph Pages: 1 -->
+<svg id="programnearest_point_1dCallsGraph" width="641pt" height="167pt"
+ viewBox="0.00 0.00 641.00 167.04" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~nearest_point_1d~~CallsGraph" class="graph" transform="scale(1.95 1.95) rotate(0) translate(4 322)">
+<title>program~~nearest_point_1d~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-322 1247,-322 1247,4 -4,4"/>
+<!-- program~nearest_point_1d -->
+<g id="program~~nearest_point_1d~~CallsGraph_node1" class="node">
+<title>program~nearest_point_1d</title>
+<polygon fill="none" stroke="black" points="103,-108 0,-108 0,-84 103,-84 103,-108"/>
+<text text-anchor="middle" x="51.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">nearest_point_1d</text>
+</g>
+<!-- none~set~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node2" class="node">
+<title>none~set~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node2"><a xlink:href="../type/nurbs_curve.html#boundprocedure-set~2" xlink:title="nurbs_curve%set">
+<polygon fill="#a7506f" stroke="#a7506f" points="273.5,-255 170.5,-255 170.5,-231 273.5,-231 273.5,-255"/>
+<text text-anchor="middle" x="222" y="-240.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set</text>
+</a>
+</g>
+</g>
+<!-- program~nearest_point_1d&#45;&gt;none~set~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge1" class="edge">
+<title>program~nearest_point_1d&#45;&gt;none~set~2</title>
+<path fill="none" stroke="#ff0000" d="M66.26,-108.14C83.3,-123.17 113.24,-149.53 139,-172 159.3,-189.71 182.52,-209.8 199.06,-224.08"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="197.19,-227.09 207.04,-230.97 201.76,-221.79 197.19,-227.09"/>
+</g>
+<!-- proc~create~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node3" class="node">
+<title>proc~create~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node3"><a xlink:href="../proc/create~2.html" xlink:title="nurbs_curve%create">
+<polygon fill="#d9534f" stroke="#d9534f" points="475.5,-192 354.5,-192 354.5,-168 475.5,-168 475.5,-192"/>
+<text text-anchor="middle" x="415" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%create</text>
+</a>
+</g>
+</g>
+<!-- program~nearest_point_1d&#45;&gt;proc~create~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge2" class="edge">
+<title>program~nearest_point_1d&#45;&gt;proc~create~2</title>
+<path fill="none" stroke="#ff0000" d="M101.88,-108.1C114.01,-111.05 126.97,-114.16 139,-117 211.37,-134.07 294.6,-153.05 350.38,-165.67"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="349.94,-169.16 360.46,-167.95 351.48,-162.33 349.94,-169.16"/>
+</g>
+<!-- proc~finalize~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node4" class="node">
+<title>proc~finalize~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node4"><a xlink:href="../proc/finalize~2.html" xlink:title="nurbs_curve%finalize">
+<polygon fill="#d9534f" stroke="#d9534f" points="478,-66 352,-66 352,-42 478,-42 478,-66"/>
+<text text-anchor="middle" x="415" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%finalize</text>
+</a>
+</g>
+</g>
+<!-- program~nearest_point_1d&#45;&gt;proc~finalize~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge3" class="edge">
+<title>program~nearest_point_1d&#45;&gt;proc~finalize~2</title>
+<path fill="none" stroke="#ff0000" d="M96.23,-83.93C109.84,-80.56 124.96,-77.23 139,-75 207.34,-64.17 286.15,-58.87 341.84,-56.32"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="342.12,-59.81 351.96,-55.87 341.81,-52.81 342.12,-59.81"/>
+</g>
+<!-- proc~nearest_point2~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node5" class="node">
+<title>proc~nearest_point2~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node5"><a xlink:href="../proc/nearest_point2~2.html" xlink:title="nurbs_curve%nearest_point2">
+<polygon fill="#d9534f" stroke="#d9534f" points="305,-108 139,-108 139,-84 305,-84 305,-108"/>
+<text text-anchor="middle" x="222" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%nearest_point2</text>
+</a>
+</g>
+</g>
+<!-- program~nearest_point_1d&#45;&gt;proc~nearest_point2~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge4" class="edge">
+<title>program~nearest_point_1d&#45;&gt;proc~nearest_point2~2</title>
+<path fill="none" stroke="#ff0000" d="M103.06,-96C111.3,-96 120.05,-96 128.92,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="128.97,-99.5 138.97,-96 128.97,-92.5 128.97,-99.5"/>
+</g>
+<!-- proc~nearest_point~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node6" class="node">
+<title>proc~nearest_point~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node6"><a xlink:href="../proc/nearest_point~2.html" xlink:title="nurbs_curve%nearest_point">
+<polygon fill="#d9534f" stroke="#d9534f" points="302,-25 142,-25 142,-1 302,-1 302,-25"/>
+<text text-anchor="middle" x="222" y="-10.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%nearest_point</text>
+</a>
+</g>
+</g>
+<!-- program~nearest_point_1d&#45;&gt;proc~nearest_point~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge5" class="edge">
+<title>program~nearest_point_1d&#45;&gt;proc~nearest_point~2</title>
+<path fill="none" stroke="#ff0000" d="M69.04,-83.8C85.96,-71.73 113.33,-53.33 139,-41 148.66,-36.36 159.29,-32.14 169.61,-28.45"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="171.05,-31.66 179.36,-25.09 168.77,-25.04 171.05,-31.66"/>
+</g>
+<!-- proc~set1~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node12" class="node">
+<title>proc~set1~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node12"><a xlink:href="../proc/set1~2.html" xlink:title="nurbs_curve%set1">
+<polygon fill="#d9534f" stroke="#d9534f" points="470,-276 360,-276 360,-252 470,-252 470,-276"/>
+<text text-anchor="middle" x="415" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set1</text>
+</a>
+</g>
+</g>
+<!-- none~set~2&#45;&gt;proc~set1~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge6" class="edge">
+<title>none~set~2&#45;&gt;proc~set1~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M273.68,-248.57C297,-251.14 324.92,-254.21 349.69,-256.93"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="349.41,-260.42 359.73,-258.03 350.17,-253.46 349.41,-260.42"/>
+</g>
+<!-- proc~set2~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node13" class="node">
+<title>proc~set2~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node13"><a xlink:href="../proc/set2~2.html" xlink:title="nurbs_curve%set2">
+<polygon fill="#d9534f" stroke="#d9534f" points="470,-318 360,-318 360,-294 470,-294 470,-318"/>
+<text text-anchor="middle" x="415" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set2</text>
+</a>
+</g>
+</g>
+<!-- none~set~2&#45;&gt;proc~set2~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge7" class="edge">
+<title>none~set~2&#45;&gt;proc~set2~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M255.12,-255.04C278.75,-263.74 311.71,-275.58 341,-285 347.33,-287.03 353.99,-289.08 360.61,-291.06"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="359.67,-294.43 370.25,-293.89 361.64,-287.71 359.67,-294.43"/>
+</g>
+<!-- proc~set3~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node14" class="node">
+<title>proc~set3~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node14"><a xlink:href="../proc/set3~2.html" xlink:title="nurbs_curve%set3">
+<polygon fill="#d9534f" stroke="#d9534f" points="470,-234 360,-234 360,-210 470,-210 470,-234"/>
+<text text-anchor="middle" x="415" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%set3</text>
+</a>
+</g>
+</g>
+<!-- none~set~2&#45;&gt;proc~set3~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge8" class="edge">
+<title>none~set~2&#45;&gt;proc~set3~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M273.68,-237.43C297,-234.86 324.92,-231.79 349.69,-229.07"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="350.17,-232.54 359.73,-227.97 349.41,-225.58 350.17,-232.54"/>
+</g>
+<!-- interface~compute_xg~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node7" class="node">
+<title>interface~compute_xg~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node7"><a xlink:href="../interface/compute_xg~2.html" xlink:title="compute_Xg">
+<polygon fill="#a7506f" stroke="#a7506f" points="658,-189 579,-189 579,-165 658,-165 658,-189"/>
+<text text-anchor="middle" x="618.5" y="-174.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_Xg</text>
+</a>
+</g>
+</g>
+<!-- proc~create~2&#45;&gt;interface~compute_xg~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge9" class="edge">
+<title>proc~create~2&#45;&gt;interface~compute_xg~2</title>
+<path fill="none" stroke="#cbff00" d="M475.64,-179.11C505.27,-178.67 540.64,-178.14 568.65,-177.73"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="569.04,-181.22 578.99,-177.57 568.94,-174.22 569.04,-181.22"/>
+</g>
+<!-- proc~is_rational~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node11" class="node">
+<title>proc~is_rational~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node11"><a xlink:href="../proc/is_rational~2.html" xlink:title="nurbs_curve%is_rational">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="903.5,-129 761.5,-129 761.5,-105 903.5,-105 903.5,-129"/>
+<text text-anchor="middle" x="832.5" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%is_rational</text>
+</a>
+</g>
+</g>
+<!-- proc~create~2&#45;&gt;proc~is_rational~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge10" class="edge">
+<title>proc~create~2&#45;&gt;proc~is_rational~2</title>
+<path fill="none" stroke="#cbff00" d="M459.53,-192.03C518.26,-206.16 625.5,-224.55 712,-198 751.48,-185.88 789.64,-155.81 811.83,-135.91"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="814.25,-138.44 819.25,-129.1 809.52,-133.28 814.25,-138.44"/>
+</g>
+<!-- proc~nearest_point2~2&#45;&gt;proc~create~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge14" class="edge">
+<title>proc~nearest_point2~2&#45;&gt;proc~create~2</title>
+<path fill="none" stroke="#0066ff" d="M242.43,-108.02C265.33,-121.79 304.84,-144.34 341,-159 346.12,-161.08 351.51,-163.03 356.96,-164.86"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="356.18,-168.28 366.77,-167.99 358.31,-161.61 356.18,-168.28"/>
+</g>
+<!-- proc~nearest_point2~2&#45;&gt;proc~finalize~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge15" class="edge">
+<title>proc~nearest_point2~2&#45;&gt;proc~finalize~2</title>
+<path fill="none" stroke="#0066ff" d="M277.73,-83.96C300.11,-79.04 326.16,-73.31 349.46,-68.19"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="350.24,-71.6 359.26,-66.04 348.74,-64.77 350.24,-71.6"/>
+</g>
+<!-- interface~nearest_point_help_1d -->
+<g id="program~~nearest_point_1d~~CallsGraph_node8" class="node">
+<title>interface~nearest_point_help_1d</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node8"><a xlink:href="../interface/nearest_point_help_1d.html" xlink:title="nearest_point_help_1d">
+<polygon fill="#a7506f" stroke="#a7506f" points="481,-24 349,-24 349,0 481,0 481,-24"/>
+<text text-anchor="middle" x="415" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nearest_point_help_1d</text>
+</a>
+</g>
+</g>
+<!-- proc~nearest_point2~2&#45;&gt;interface~nearest_point_help_1d -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge11" class="edge">
+<title>proc~nearest_point2~2&#45;&gt;interface~nearest_point_help_1d</title>
+<path fill="none" stroke="#0066ff" d="M242.43,-83.98C265.33,-70.21 304.84,-47.66 341,-33 346.12,-30.92 351.51,-28.97 356.96,-27.14"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="358.31,-30.39 366.77,-24.01 356.18,-23.72 358.31,-30.39"/>
+</g>
+<!-- none~derivative2~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node9" class="node">
+<title>none~derivative2~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node9"><a xlink:href="../type/nurbs_curve.html#boundprocedure-derivative2~2" xlink:title="nurbs_curve%derivative2">
+<polygon fill="#a7506f" stroke="#a7506f" points="489,-108 341,-108 341,-84 489,-84 489,-108"/>
+<text text-anchor="middle" x="415" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%derivative2</text>
+</a>
+</g>
+</g>
+<!-- proc~nearest_point2~2&#45;&gt;none~derivative2~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge12" class="edge">
+<title>proc~nearest_point2~2&#45;&gt;none~derivative2~2</title>
+<path fill="none" stroke="#0066ff" d="M305.11,-96C313.59,-96 322.22,-96 330.71,-96"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="330.99,-99.5 340.99,-96 330.99,-92.5 330.99,-99.5"/>
+</g>
+<!-- proc~cmp_xg~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node10" class="node">
+<title>proc~cmp_xg~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node10"><a xlink:href="../proc/cmp_xg~2.html" xlink:title="nurbs_curve%cmp_Xg">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="480,-150 350,-150 350,-126 480,-126 480,-150"/>
+<text text-anchor="middle" x="415" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%cmp_Xg</text>
+</a>
+</g>
+</g>
+<!-- proc~nearest_point2~2&#45;&gt;proc~cmp_xg~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge13" class="edge">
+<title>proc~nearest_point2~2&#45;&gt;proc~cmp_xg~2</title>
+<path fill="none" stroke="#0066ff" d="M277.73,-108.04C300.11,-112.96 326.16,-118.69 349.46,-123.81"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="348.74,-127.23 359.26,-125.96 350.24,-120.4 348.74,-127.23"/>
+</g>
+<!-- proc~nearest_point~2&#45;&gt;interface~nearest_point_help_1d -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge16" class="edge">
+<title>proc~nearest_point~2&#45;&gt;interface~nearest_point_help_1d</title>
+<path fill="none" stroke="#cc00ff" d="M302.07,-12.59C314.25,-12.52 326.81,-12.46 338.9,-12.39"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="338.96,-15.89 348.94,-12.34 338.92,-8.89 338.96,-15.89"/>
+</g>
+<!-- proc~derivative2_scalar~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node17" class="node">
+<title>proc~derivative2_scalar~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node17"><a xlink:href="../proc/derivative2_scalar~2.html" xlink:title="nurbs_curve%derivative2_scalar">
+<polygon fill="#d9534f" stroke="#d9534f" points="711,-109 526,-109 526,-85 711,-85 711,-109"/>
+<text text-anchor="middle" x="618.5" y="-94.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%derivative2_scalar</text>
+</a>
+</g>
+</g>
+<!-- none~derivative2~2&#45;&gt;proc~derivative2_scalar~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge17" class="edge">
+<title>none~derivative2~2&#45;&gt;proc~derivative2_scalar~2</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M489.03,-96.36C497.71,-96.41 506.68,-96.45 515.66,-96.49"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="515.77,-100 525.79,-96.54 515.81,-93 515.77,-100"/>
+</g>
+<!-- proc~derivative2_vector~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node18" class="node">
+<title>proc~derivative2_vector~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node18"><a xlink:href="../proc/derivative2_vector~2.html" xlink:title="nurbs_curve%derivative2_vector">
+<polygon fill="#d9534f" stroke="#d9534f" points="712,-67 525,-67 525,-43 712,-43 712,-67"/>
+<text text-anchor="middle" x="618.5" y="-52.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%derivative2_vector</text>
+</a>
+</g>
+</g>
+<!-- none~derivative2~2&#45;&gt;proc~derivative2_vector~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge18" class="edge">
+<title>none~derivative2~2&#45;&gt;proc~derivative2_vector~2</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M475.1,-83.98C498.06,-79.3 524.53,-73.92 548.37,-69.07"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="549.3,-72.45 558.41,-67.02 547.91,-65.59 549.3,-72.45"/>
+</g>
+<!-- proc~cmp_xg~2&#45;&gt;interface~compute_xg~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge19" class="edge">
+<title>proc~cmp_xg~2&#45;&gt;interface~compute_xg~2</title>
+<path fill="none" stroke="#00ff3f" d="M478.1,-150.02C507.22,-155.66 541.42,-162.27 568.65,-167.55"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="568.24,-171.03 578.73,-169.5 569.57,-164.16 568.24,-171.03"/>
+</g>
+<!-- proc~cmp_xg~2&#45;&gt;proc~is_rational~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge20" class="edge">
+<title>proc~cmp_xg~2&#45;&gt;proc~is_rational~2</title>
+<path fill="none" stroke="#00ff3f" d="M480.01,-134.76C552.78,-131.09 671.68,-125.08 750.76,-121.08"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="751.35,-124.56 761.16,-120.56 751,-117.56 751.35,-124.56"/>
+</g>
+<!-- proc~cmp_degree~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node15" class="node">
+<title>proc~cmp_degree~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node15"><a xlink:href="../proc/cmp_degree~2.html" xlink:title="nurbs_curve%cmp_degree">
+<polygon fill="#d9534f" stroke="#d9534f" points="695.5,-273 541.5,-273 541.5,-249 695.5,-249 695.5,-273"/>
+<text text-anchor="middle" x="618.5" y="-258.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%cmp_degree</text>
+</a>
+</g>
+</g>
+<!-- proc~set1~2&#45;&gt;proc~cmp_degree~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge21" class="edge">
+<title>proc~set1~2&#45;&gt;proc~cmp_degree~2</title>
+<path fill="none" stroke="#003fff" d="M470.26,-263.19C489,-262.91 510.47,-262.59 531.13,-262.29"/>
+<polygon fill="#003fff" stroke="#003fff" points="531.24,-265.78 541.19,-262.14 531.14,-258.79 531.24,-265.78"/>
+</g>
+<!-- proc~compute_knot_vector -->
+<g id="program~~nearest_point_1d~~CallsGraph_node16" class="node">
+<title>proc~compute_knot_vector</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node16"><a xlink:href="../proc/compute_knot_vector.html" xlink:title="compute_knot_vector">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="682,-318 555,-318 555,-294 682,-294 682,-318"/>
+<text text-anchor="middle" x="618.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_knot_vector</text>
+</a>
+</g>
+</g>
+<!-- proc~set2~2&#45;&gt;proc~compute_knot_vector -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge22" class="edge">
+<title>proc~set2~2&#45;&gt;proc~compute_knot_vector</title>
+<path fill="none" stroke="#7f00ff" d="M470.26,-306C493.21,-306 520.28,-306 544.91,-306"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="544.93,-309.5 554.93,-306 544.93,-302.5 544.93,-309.5"/>
+</g>
+<!-- proc~set3~2&#45;&gt;proc~cmp_degree~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge23" class="edge">
+<title>proc~set3~2&#45;&gt;proc~cmp_degree~2</title>
+<path fill="none" stroke="#ff00bf" d="M470.26,-232.5C493.31,-236.96 520.52,-242.23 545.24,-247.01"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="544.81,-250.5 555.3,-248.96 546.14,-243.62 544.81,-250.5"/>
+</g>
+<!-- proc~get_multiplicity~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node20" class="node">
+<title>proc~get_multiplicity~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node20"><a xlink:href="../proc/get_multiplicity~2.html" xlink:title="nurbs_curve%get_multiplicity">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="917,-273 748,-273 748,-249 917,-249 917,-273"/>
+<text text-anchor="middle" x="832.5" y="-258.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nurbs_curve%get_multiplicity</text>
+</a>
+</g>
+</g>
+<!-- proc~cmp_degree~2&#45;&gt;proc~get_multiplicity~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge24" class="edge">
+<title>proc~cmp_degree~2&#45;&gt;proc~get_multiplicity~2</title>
+<path fill="none" stroke="#ff0000" d="M695.74,-261C709.3,-261 723.57,-261 737.56,-261"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="737.68,-264.5 747.68,-261 737.68,-257.5 737.68,-264.5"/>
+</g>
+<!-- proc~repelem -->
+<g id="program~~nearest_point_1d~~CallsGraph_node21" class="node">
+<title>proc~repelem</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node21"><a xlink:href="../proc/repelem.html" xlink:title="repelem">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="861,-318 804,-318 804,-294 861,-294 861,-318"/>
+<text text-anchor="middle" x="832.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">repelem</text>
+</a>
+</g>
+</g>
+<!-- proc~compute_knot_vector&#45;&gt;proc~repelem -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge25" class="edge">
+<title>proc~compute_knot_vector&#45;&gt;proc~repelem</title>
+<path fill="none" stroke="#7fff00" d="M682.25,-306C718.4,-306 762.65,-306 793.55,-306"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="793.88,-309.5 803.88,-306 793.88,-302.5 793.88,-309.5"/>
+</g>
+<!-- proc~derivative2_scalar~2&#45;&gt;proc~is_rational~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge27" class="edge">
+<title>proc~derivative2_scalar~2&#45;&gt;proc~is_rational~2</title>
+<path fill="none" stroke="#00ffff" d="M711.25,-105.66C724.5,-106.91 738.05,-108.18 751.05,-109.41"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="751.06,-112.93 761.34,-110.38 751.71,-105.96 751.06,-112.93"/>
+</g>
+<!-- interface~compute_d2tgc~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node19" class="node">
+<title>interface~compute_d2tgc~2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node19"><a xlink:href="../interface/compute_d2tgc~2.html" xlink:title="compute_d2Tgc">
+<polygon fill="#a7506f" stroke="#a7506f" points="881.5,-77 783.5,-77 783.5,-53 881.5,-53 881.5,-77"/>
+<text text-anchor="middle" x="832.5" y="-62.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_d2Tgc</text>
+</a>
+</g>
+</g>
+<!-- proc~derivative2_scalar~2&#45;&gt;interface~compute_d2tgc~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge26" class="edge">
+<title>proc~derivative2_scalar~2&#45;&gt;interface~compute_d2tgc~2</title>
+<path fill="none" stroke="#00ffff" d="M699.04,-84.99C723.71,-81.27 750.42,-77.24 773.34,-73.78"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="773.89,-77.24 783.26,-72.28 772.85,-70.31 773.89,-77.24"/>
+</g>
+<!-- proc~derivative2_vector~2&#45;&gt;proc~is_rational~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge29" class="edge">
+<title>proc~derivative2_vector~2&#45;&gt;proc~is_rational~2</title>
+<path fill="none" stroke="#7f00ff" d="M676.98,-67.04C688.63,-69.77 700.75,-72.8 712,-76 738.1,-83.42 766.87,-93.24 789.65,-101.41"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="788.74,-104.8 799.34,-104.91 791.12,-98.22 788.74,-104.8"/>
+</g>
+<!-- proc~derivative2_vector~2&#45;&gt;interface~compute_d2tgc~2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge28" class="edge">
+<title>proc~derivative2_vector~2&#45;&gt;interface~compute_d2tgc~2</title>
+<path fill="none" stroke="#7f00ff" d="M712.18,-59.37C732.86,-60.35 754.23,-61.36 773.07,-62.24"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="773.1,-65.75 783.26,-62.72 773.43,-58.76 773.1,-65.75"/>
+</g>
+<!-- interface~compute_multiplicity -->
+<g id="program~~nearest_point_1d~~CallsGraph_node22" class="node">
+<title>interface~compute_multiplicity</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node22"><a xlink:href="../interface/compute_multiplicity.html" xlink:title="compute_multiplicity">
+<polygon fill="#a7506f" stroke="#a7506f" points="1077,-273 953,-273 953,-249 1077,-249 1077,-273"/>
+<text text-anchor="middle" x="1015" y="-258.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_multiplicity</text>
+</a>
+</g>
+</g>
+<!-- proc~get_multiplicity~2&#45;&gt;interface~compute_multiplicity -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge30" class="edge">
+<title>proc~get_multiplicity~2&#45;&gt;interface~compute_multiplicity</title>
+<path fill="none" stroke="#00ff00" d="M917.15,-261C925.73,-261 934.4,-261 942.84,-261"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="942.99,-264.5 952.99,-261 942.99,-257.5 942.99,-264.5"/>
+</g>
+<!-- proc~compute_multiplicity1 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node23" class="node">
+<title>proc~compute_multiplicity1</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node23"><a xlink:href="../proc/compute_multiplicity1.html" xlink:title="compute_multiplicity1">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="1243,-294 1113,-294 1113,-270 1243,-270 1243,-294"/>
+<text text-anchor="middle" x="1178" y="-279.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_multiplicity1</text>
+</a>
+</g>
+</g>
+<!-- interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity1 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge31" class="edge">
+<title>interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity1</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1077.33,-269C1085.69,-270.09 1094.35,-271.22 1102.92,-272.34"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1102.53,-275.82 1112.9,-273.64 1103.44,-268.88 1102.53,-275.82"/>
+</g>
+<!-- proc~compute_multiplicity2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_node24" class="node">
+<title>proc~compute_multiplicity2</title>
+<g id="a_program~~nearest_point_1d~~CallsGraph_node24"><a xlink:href="../proc/compute_multiplicity2.html" xlink:title="compute_multiplicity2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="1243,-252 1113,-252 1113,-228 1243,-228 1243,-252"/>
+<text text-anchor="middle" x="1178" y="-237.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">compute_multiplicity2</text>
+</a>
+</g>
+</g>
+<!-- interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity2 -->
+<g id="program~~nearest_point_1d~~CallsGraph_edge32" class="edge">
+<title>interface~compute_multiplicity&#45;&gt;proc~compute_multiplicity2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1077.33,-253C1085.69,-251.91 1094.35,-250.78 1102.92,-249.66"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1103.44,-253.12 1112.9,-248.36 1102.53,-246.18 1103.44,-253.12"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panprogramnearest_point_1dCallsGraph = svgPanZoom('#programnearest_point_1dCallsGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.16 1.16) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-wc"></span>
+              real(kind=rk),
+            </td>
+            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>Wc</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Arrays for control points and weights</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-xc"></span>
+              real(kind=rk),
+            </td>
+            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>Xc</strong>(:,:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Arrays for control points and weights</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-id"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>id</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Variable for the id of the nearest point</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-knot"></span>
+              real(kind=rk)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>knot</strong>(6)</td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Array for knot vector</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nearest_xg"></span>
+              real(kind=rk),
+            </td>
+            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>nearest_Xg</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Array for the nearest point on the curve</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nearest_xt"></span>
+              real(kind=rk)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nearest_Xt</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Array for the parametric coordinates of the nearest point</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-shape~3"></span>
+              type(<a href='../type/nurbs_curve.html'>nurbs_curve</a>)
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>shape</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Declare a NURBS curve object</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+
+
+    
+
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              ForCAD
+ was developed by Seyed Ali Ghasemi<br>              &copy; 2024 BSD 3-Clause
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-06-22T19:32:33.440940             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
